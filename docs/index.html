@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文字体精简版 - TTF-Min</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔤 中文字体精简版</h1>
+            <p class="subtitle">基于《通用规范汉字表》8105 字精简，体积缩减 75%+</p>
+            <div class="badges">
+                <a href="https://github.com/ZaneL1u/TTF-Min" target="_blank">
+                    <img src="https://img.shields.io/github/stars/ZaneL1u/TTF-Min?style=social" alt="GitHub stars">
+                </a>
+                <a href="https://github.com/ZaneL1u/TTF-Min" target="_blank">
+                    <img src="https://img.shields.io/github/forks/ZaneL1u/TTF-Min?style=social" alt="GitHub forks">
+                </a>
+            </div>
+        </header>
+
+        <nav class="font-tabs">
+            <button class="tab-btn active" data-font="source-han-sans">思源黑体</button>
+            <button class="tab-btn" data-font="source-han-serif">思源宋体</button>
+            <button class="tab-btn" data-font="alibaba">阿里巴巴普惠体</button>
+            <button class="tab-btn" data-font="sarasa">更纱黑体</button>
+        </nav>
+
+        <!-- 思源黑体 -->
+        <section class="font-section active" id="source-han-sans">
+            <div class="font-header">
+                <h2>思源黑体 Source Han Sans SC</h2>
+                <p class="font-meta">
+                    <span class="license">SIL OFL 1.1</span>
+                    <span class="size">原始 19M → 精简后 4.7M</span>
+                </p>
+            </div>
+            
+            <div class="preview-section">
+                <h3>字体预览</h3>
+                <div class="preview-controls">
+                    <label>预览文字：</label>
+                    <input type="text" id="preview-text-sans" class="preview-input" value="汉字之美，在于形意兼备">
+                    <label>字号：</label>
+                    <input type="range" id="font-size-sans" min="12" max="72" value="32">
+                    <span id="font-size-value-sans">32px</span>
+                </div>
+                <div class="weight-preview" id="weight-preview-sans">
+                    <div class="weight-item" style="font-family: 'Source Han Sans SC'; font-weight: 200;">
+                        <span class="weight-label">ExtraLight 200</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Sans SC'; font-weight: 300;">
+                        <span class="weight-label">Light 300</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Sans SC'; font-weight: 350;">
+                        <span class="weight-label">Normal 350</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Sans SC'; font-weight: 400;">
+                        <span class="weight-label">Regular 400</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Sans SC'; font-weight: 500;">
+                        <span class="weight-label">Medium 500</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Sans SC'; font-weight: 700;">
+                        <span class="weight-label">Bold 700</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Sans SC'; font-weight: 900;">
+                        <span class="weight-label">Heavy 900</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-section">
+                <h3>📋 CSS 代码</h3>
+                <p class="code-desc">复制以下代码到你的 CSS 文件中即可使用</p>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    <pre><code>/* 思源黑体 - 精简版 */
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-weight: 200;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-思源黑体/SourceHanSansSC-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-思源黑体/SourceHanSansSC-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-weight: 350;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-思源黑体/SourceHanSansSC-Normal.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-思源黑体/SourceHanSansSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-思源黑体/SourceHanSansSC-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-思源黑体/SourceHanSansSC-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-思源黑体/SourceHanSansSC-Heavy.ttf') format('truetype');
+}
+
+/* 使用方式 */
+body {
+  font-family: 'Source Han Sans SC', sans-serif;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 思源宋体 -->
+        <section class="font-section" id="source-han-serif">
+            <div class="font-header">
+                <h2>思源宋体 Source Han Serif CN</h2>
+                <p class="font-meta">
+                    <span class="license">SIL OFL 1.1</span>
+                    <span class="size">原始 11M → 精简后 3M</span>
+                </p>
+            </div>
+            
+            <div class="preview-section">
+                <h3>字体预览</h3>
+                <div class="preview-controls">
+                    <label>预览文字：</label>
+                    <input type="text" id="preview-text-serif" class="preview-input" value="汉字之美，在于形意兼备">
+                    <label>字号：</label>
+                    <input type="range" id="font-size-serif" min="12" max="72" value="32">
+                    <span id="font-size-value-serif">32px</span>
+                </div>
+                <div class="weight-preview" id="weight-preview-serif">
+                    <div class="weight-item" style="font-family: 'Source Han Serif CN'; font-weight: 200;">
+                        <span class="weight-label">ExtraLight 200</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Serif CN'; font-weight: 300;">
+                        <span class="weight-label">Light 300</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Serif CN'; font-weight: 400;">
+                        <span class="weight-label">Regular 400</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Serif CN'; font-weight: 500;">
+                        <span class="weight-label">Medium 500</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Serif CN'; font-weight: 600;">
+                        <span class="weight-label">SemiBold 600</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Serif CN'; font-weight: 700;">
+                        <span class="weight-label">Bold 700</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Source Han Serif CN'; font-weight: 900;">
+                        <span class="weight-label">Heavy 900</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-section">
+                <h3>📋 CSS 代码</h3>
+                <p class="code-desc">复制以下代码到你的 CSS 文件中即可使用</p>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    <pre><code>/* 思源宋体 - 精简版 */
+@font-face {
+  font-family: 'Source Han Serif CN';
+  font-weight: 200;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/otf-思源宋体/SourceHanSerifCN-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/otf-思源宋体/SourceHanSerifCN-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/otf-思源宋体/SourceHanSerifCN-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/otf-思源宋体/SourceHanSerifCN-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/otf-思源宋体/SourceHanSerifCN-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/otf-思源宋体/SourceHanSerifCN-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Source Han Serif CN';
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/otf-思源宋体/SourceHanSerifCN-Heavy.otf') format('opentype');
+}
+
+/* 使用方式 */
+body {
+  font-family: 'Source Han Serif CN', serif;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 阿里巴巴普惠体 -->
+        <section class="font-section" id="alibaba">
+            <div class="font-header">
+                <h2>阿里巴巴普惠体 Alibaba PuHuiTi</h2>
+                <p class="font-meta">
+                    <span class="license">免费商用</span>
+                    <span class="size">原始 8.5M → 精简后 2.1M</span>
+                </p>
+            </div>
+            
+            <div class="preview-section">
+                <h3>字体预览</h3>
+                <div class="preview-controls">
+                    <label>预览文字：</label>
+                    <input type="text" id="preview-text-alibaba" class="preview-input" value="汉字之美，在于形意兼备">
+                    <label>字号：</label>
+                    <input type="range" id="font-size-alibaba" min="12" max="72" value="32">
+                    <span id="font-size-value-alibaba">32px</span>
+                </div>
+                <div class="weight-preview" id="weight-preview-alibaba">
+                    <div class="weight-item" style="font-family: 'Alibaba PuHuiTi 3'; font-weight: 300;">
+                        <span class="weight-label">Light 300</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Alibaba PuHuiTi 3'; font-weight: 400;">
+                        <span class="weight-label">Regular 400</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Alibaba PuHuiTi 3'; font-weight: 500;">
+                        <span class="weight-label">Medium 500</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Alibaba PuHuiTi 3'; font-weight: 700;">
+                        <span class="weight-label">Bold 700</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Alibaba PuHuiTi 3'; font-weight: 900;">
+                        <span class="weight-label">Black 900</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-section">
+                <h3>📋 CSS 代码</h3>
+                <p class="code-desc">复制以下代码到你的 CSS 文件中即可使用</p>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    <pre><code>/* 阿里巴巴普惠体 - 精简版 */
+@font-face {
+  font-family: 'Alibaba PuHuiTi 3';
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-45-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi 3';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-55-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi 3';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-65-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi 3';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-85-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi 3';
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-115-Black.ttf') format('truetype');
+}
+
+/* 使用方式 */
+body {
+  font-family: 'Alibaba PuHuiTi 3', sans-serif;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 更纱黑体 -->
+        <section class="font-section" id="sarasa">
+            <div class="font-header">
+                <h2>更纱黑体 Sarasa Gothic SC</h2>
+                <p class="font-meta">
+                    <span class="license">SIL OFL 1.1</span>
+                    <span class="size">原始 24M → 精简后 4.5M</span>
+                </p>
+            </div>
+            
+            <div class="preview-section">
+                <h3>字体预览</h3>
+                <div class="preview-controls">
+                    <label>预览文字：</label>
+                    <input type="text" id="preview-text-sarasa" class="preview-input" value="汉字之美，在于形意兼备">
+                    <label>字号：</label>
+                    <input type="range" id="font-size-sarasa" min="12" max="72" value="32">
+                    <span id="font-size-value-sarasa">32px</span>
+                </div>
+                <div class="weight-preview" id="weight-preview-sarasa">
+                    <div class="weight-item" style="font-family: 'Sarasa Gothic SC'; font-weight: 200;">
+                        <span class="weight-label">ExtraLight 200</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Sarasa Gothic SC'; font-weight: 300;">
+                        <span class="weight-label">Light 300</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Sarasa Gothic SC'; font-weight: 400;">
+                        <span class="weight-label">Regular 400</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Sarasa Gothic SC'; font-weight: 600;">
+                        <span class="weight-label">SemiBold 600</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Sarasa Gothic SC'; font-weight: 700;">
+                        <span class="weight-label">Bold 700</span>
+                        <span class="weight-text">汉字之美，在于形意兼备</span>
+                    </div>
+                    <div class="weight-item" style="font-family: 'Sarasa Gothic SC'; font-weight: 400; font-style: italic;">
+                        <span class="weight-label">Italic 400</span>
+                        <span class="weight-text sarasa-italic">汉字之美，在于形意兼备</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-section">
+                <h3>📋 CSS 代码</h3>
+                <p class="code-desc">复制以下代码到你的 CSS 文件中即可使用</p>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    <pre><code>/* 更纱黑体 - 精简版 */
+@font-face {
+  font-family: 'Sarasa Gothic SC';
+  font-weight: 200;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-更纱黑体/SarasaGothicSC-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sarasa Gothic SC';
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-更纱黑体/SarasaGothicSC-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sarasa Gothic SC';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-更纱黑体/SarasaGothicSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sarasa Gothic SC';
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-更纱黑体/SarasaGothicSC-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sarasa Gothic SC';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-更纱黑体/SarasaGothicSC-Bold.ttf') format('truetype');
+}
+
+/* 斜体 */
+@font-face {
+  font-family: 'Sarasa Gothic SC';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/ZaneL1u/TTF-Min@main/dist/ttf-更纱黑体/SarasaGothicSC-Italic.ttf') format('truetype');
+}
+
+/* 使用方式 */
+body {
+  font-family: 'Sarasa Gothic SC', sans-serif;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                <a href="https://github.com/ZaneL1u/TTF-Min" target="_blank">GitHub</a> · 
+                基于 <a href="http://www.gov.cn/gzdt/att/att/site1/20130819/tygfhzb.pdf" target="_blank">《通用规范汉字表》</a> 8105 字精简
+            </p>
+            <p class="copyright">Made with ❤️ by <a href="https://github.com/ZaneL1u" target="_blank">ZaneL1u</a></p>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast">已复制到剪贴板</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

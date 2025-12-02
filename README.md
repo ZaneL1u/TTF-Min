@@ -22,15 +22,17 @@
 - 字体数据仅包含基础常用的中文、英文字符及符号
 - 字体内容根据 **教育部《通用规范汉字表》** （共 8105 字）进行了精简，相较 3500 常用字版，体积略微增大。
 
-
 ## 概览
+
+家人们还想要什么字体（仅限开源字体）欢迎 PR~
+
 | 名称 | 文件 | 原始 | 3500 字版 | 《通用规范汉字表》版 | 下载 |
 |------|---------------------------|---------|-----------|--------|------|
-| 思源黑体 Regular |SourceHanSansSC-Regular.ttf| 19M | 1.9M | 4.7M | [下载](https://github.com/iizyd/SourceHanSansCN-TTF-Min/raw/main/dist/ttf-思源黑体/SourceHanSansSC-Regular.ttf) |
-| 思源宋体 Regular |SourceHanSerifCN-Regular.otf| 11M | 1.2M | 3M | [下载](https://github.com/iizyd/SourceHanSansCN-TTF-Min/raw/main/dist/otf-思源宋体/SourceHanSerifCN-Regular.otf) |
-| 阿里巴巴普惠体 Regular |AlibabaPuHuiTi-3-55-Regular.ttf| 8.5M | 858KB | 2.1M | [下载](https://github.com/iizyd/SourceHanSansCN-TTF-Min/raw/main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-55-Regular.ttf) |
-| 阿里巴巴普惠体 Regular |AlibabaPuHuiTi-3-55-Regular.otf| 7.4M | 782KB | 1.9M | [下载](https://github.com/iizyd/SourceHanSansCN-TTF-Min/raw/main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-55-Regular.otf) |
-| 更纱黑体 Regular |SarasaGothicSC-Regular.ttf| 24M | - | 4.5M |  |
+| 思源黑体 Regular |SourceHanSansSC-Regular.ttf| 19M | 1.9M | 4.7M | [下载](https://github.com/ZaneL1u/TTF-Min/raw/main/dist/ttf-思源黑体/SourceHanSansSC-Regular.ttf) |
+| 思源宋体 Regular |SourceHanSerifCN-Regular.otf| 11M | 1.2M | 3M | [下载](https://github.com/ZaneL1u/TTF-Min/raw/main/dist/otf-思源宋体/SourceHanSerifCN-Regular.otf) |
+| 阿里巴巴普惠体 Regular |AlibabaPuHuiTi-3-55-Regular.ttf| 8.5M | 858KB | 2.1M | [下载](https://github.com/ZaneL1u/TTF-Min/raw/main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-55-Regular.ttf) |
+| 阿里巴巴普惠体 Regular |AlibabaPuHuiTi-3-55-Regular.otf| 7.4M | 782KB | 1.9M | [下载](https://github.com/ZaneL1u/TTF-Min/raw/main/dist/ttf%2Botf阿里巴巴普惠体/AlibabaPuHuiTi-3-55-Regular.otf) |
+| 更纱黑体 Regular |SarasaGothicSC-Regular.ttf| 24M | - | 4.5M | [下载](https://github.com/ZaneL1u/TTF-Min/raw/refs/heads/main/dist/ttf-%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93/SarasaGothicSC-Regular.ttf) |
 
 表格仅展示了已精简的各字体 Regular 字重，方便下载。
 
@@ -72,6 +74,19 @@ pyftsubset 1.otf --text-file=1.txt --output-file=2.otf
 **提示**
 1. 如遇`main.sh`执行权限的问题，可尝试先执行`chmod +x main.sh`命令
 2. 如果是新增其它字体或字体文件，可在`src`目录下新建文件夹，并将字体文件放至此文件夹中，重新执行`main.sh`
+
+## 字体许可证
+
+本仓库中精简的字体均为开源或免费商用字体，以下是各字体的许可证信息：
+
+| 字体名称 | 许可证 | 官方链接 |
+|---------|--------|---------|
+| 思源黑体 (Source Han Sans) | [SIL Open Font License 1.1](https://scripts.sil.org/OFL) | [GitHub](https://github.com/adobe-fonts/source-han-sans) |
+| 思源宋体 (Source Han Serif) | [SIL Open Font License 1.1](https://scripts.sil.org/OFL) | [GitHub](https://github.com/adobe-fonts/source-han-serif) |
+| 阿里巴巴普惠体 | [阿里巴巴普惠体授权](https://www.alibabafonts.com/#/more) | [官网](https://www.alibabafonts.com/) |
+| 更纱黑体 (Sarasa Gothic) | [SIL Open Font License 1.1](https://scripts.sil.org/OFL) | [GitHub](https://github.com/be5invis/Sarasa-Gothic) |
+
+> ⚠️ **声明**：本仓库仅对上述字体进行子集化精简处理，不改变原字体的许可证条款。使用精简后的字体时，请遵守原字体的许可证规定。
 
 ## 包含的字体数据
 
